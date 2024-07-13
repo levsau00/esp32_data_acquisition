@@ -40,7 +40,8 @@ if __name__ == "__main__":
         ser.reset_input_buffer()
         ser.write(str.encode(f'R {millis * 10}'))
         # print(str.encode(f'R {millis}'))
-        with (outdir / datetime.now().strftime(f"%m_%d_%y-%H_%M_%S-{millis}ms.csv")).open("wb") as f:
+        fname = outdir / datetime.now().strftime(f"%m_%d_%y-%H_%M_%S-{millis}ms.csv")
+        with fname.open("wb") as f:
             # have to wait so data has time to transfer
             sleep(3 + millis / 1000)
             record_len = ser.readline()
@@ -52,6 +53,7 @@ if __name__ == "__main__":
                 sleep(0.005)
             
             f.write(bytes_array)
+        print(f"data written to {str(fname)}\n")
 
     
 

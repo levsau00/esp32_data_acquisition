@@ -4,11 +4,11 @@ A simple esp32 sensor data acquisition program and accompanying python cli.
 ## Hardware
 The board used is the [TTGO T-Display](https://github.com/Xinyuan-LilyGO/TTGO-T-Display), an ESP32 powered mcu module
 
-![The TTGO board](esp32_img.jpeg)
+![The TTGO board](assets/esp32_img.jpeg)
 
 For this example, the sensor used is a simple sound sensor attached supplied 3.3V, with its analog out hooked up to GPIO pin 32 of the mcu.
 
-![Sound Sensor](sound_sensor_img.jpg)
+![Sound Sensor](assets/sound_sensor_img.jpg)
 
 ## Software
 
